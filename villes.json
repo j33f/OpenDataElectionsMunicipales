@@ -1,0 +1,10 @@
+{
+	"montpellier": {
+		"nom": "Montpellier",
+		"geojson": "http://localhost:1337/datastore/VilleMTP_MTP_BureauxVote.geojson",
+		"attributions": {
+			"nom": "Ville de Montpellier",
+			"url": "http://opendata.montpelliernumerique.fr"
+		}
+	}
+}
