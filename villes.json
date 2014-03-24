@@ -1,7 +1,21 @@
 {
 	"montpellier": {
 		"nom": "Montpellier",
-		"geojson": "http://localhost:1337/datastore/VilleMTP_MTP_BureauxVote.geojson",
+		"geoJson": "http://api.mtnlab.org/elections/resultat/275?geometry=1",
+		"mapCenter": [43.6112422, 3.8767337],
+		"zoom": 13, 
+		"dataMap": {
+			"Bureau": "Bureau",
+			"NomBureau": "Nom_Bureau",
+			"inscrits": "nbInscrits",
+			"votants": "nbVotants",
+			"blancsNuls": "nbNuls",
+			"exprimes": "nbExprimés",
+			"procurations": "nbProcurations",
+			"candidats": "candidat",
+			"voix": "voixCandidat",
+			"nom": "nomCandidat"
+		},
 		"attributions": {
 			"nom": "Ville de Montpellier",
 			"url": "http://opendata.montpelliernumerique.fr"

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{{ville.nom}} - Élections Municipales 2014</title>
+	<title>{{{nomVille}}} - Élections Municipales 2014</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
@@ -19,14 +19,14 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="./{{ville.slug}}">Résultats des élections municipales à {{ville.nom}}</a>
+	      <a class="navbar-brand" href="./{{ville.slug}}">Résultats des élections municipales à {{{nomVille}}}</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li class="active"><a href="#" id="showMap">La carte</a></li>
 	        <li><a href="#" id="showData">Les données</a></li>
-	        <li class="dropdown">
+	        <!--li class="dropdown">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Les autres villes ({{nbVilles}}) <b class="caret"></b></a>
 	          <ul class="dropdown-menu">
 	          	{{# villes}}
@@ -37,13 +37,13 @@
 	            {{/villes}}
 	            <li><a href="#">Ajouter votre ville</a></li>
 	          </ul>
-	        </li>
-	        <li><a href="#">À propos</a></li>
+	        </li-->
+	        <li><a href="#" id="showAbout">À propos</a></li>
 	      </ul>
 	</nav>	
 
 	<div id="map"></div>
-	<div id="data">
+	<div id="data" style="background:white;">
 		<table class="table table-striped tablesorter">
 			<thead>
 			<tr id="table-header"></tr>
@@ -52,14 +52,22 @@
 			</tbody>
 		</table>
 	</div>
+	<div id="about" style="position:absolute; padding:20px; background: white;">
+	<h2>À propos</h2>
+	<h3>Réalisation</h3>
+	<p>
+		<a href="http://about.me/">Jeff_Jean-François VIAL</a> / <a href="http://modulaweb.fr">Modulaweb</a>
+	</p>
+	<h3>Licence</h3>
+	<p><a href="https://raw.githubusercontent.com/Modulaweb/OpenDataElectionsMunicipales/master/LICENSE">GNU GPL v3</a></p>
+	<p>Code source disponnible sur GitHub : <a href="https://github.com/Modulaweb/OpenDataElectionsMunicipales">https://github.com/Modulaweb/OpenDataElectionsMunicipales</a></p>
+	<h3>Données</h3>
+	<p>Les données sont issues des <a href="http://opendata.montpelliernumerique.fr/Resultats-des-elections-129">données ouvertes de la ville de Montpellier</a> via l'<a href="http://api.mtnlab.org/elections/resultat/275?geometry=1">API MTN Lab</a> par David Olivari de <a href="http://bype.fr/">Bype</a></p>
+	</div>
 
 	<!-- JS -->
 	<script>
-		var geoJsonUrl = '{{ville.geojson}}';
-		var attribution = {
-			nom: '{{ville.attribution.nom}}'
-			, url: '{{ville.attribution.url}}'
-		}
+		var ville = {{{ville}}};
 	</script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
