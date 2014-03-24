@@ -19,7 +19,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="./{{ville.slug}}">Résultats des élections municipales à {{{nomVille}}}</a>
+	      <a class="navbar-brand" href="./{{slug}}">Résultats des élections municipales à {{{nomVille}}}</a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

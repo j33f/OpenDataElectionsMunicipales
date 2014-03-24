@@ -1,6 +1,7 @@
 {
 	"montpellier": {
 		"nom": "Montpellier",
+		"slug": "montpellier",
 		"geoJson": "http://api.mtnlab.org/elections/resultat/275?geometry=1",
 		"mapCenter": [43.6112422, 3.8767337],
 		"zoom": 13, 

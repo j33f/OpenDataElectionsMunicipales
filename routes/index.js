@@ -21,6 +21,7 @@ exports.display = function(req, res){
 			villes: villesRefined
 			, ville: JSON.stringify(ville)
 			, nomVille: ville.nom
+			, slug: ville.slug
 			, nbVilles: villesRefined.length
 		});
 	} else {
